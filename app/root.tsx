@@ -10,6 +10,7 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import { isatty } from "tty";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -45,16 +46,38 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
   return (
     <>
-      <nav>
-        <NavLink to="/"> CRUD Router-V7 </NavLink>
-        <div>
-          <NavLink to="/"> Items </NavLink>
-          <NavLink to="/newItem"> New Item </NavLink>
+      <nav className="container bg-white shadow">
+        <div className="wraper-container">
+          <NavLink
+            className="text-xl sm:text-2xl font-bold text-shadow-lg/20 dark:text-shadow-none"
+            to="/"
+          >
+          
+            CRUD Router-V7
+          </NavLink>
+          <div className="space-x-2.5 text-gray-500 font-medium sm:space-x-5 sm:font-normal sm:text-[1.25rem]">
+            <NavLink
+              className={({isActive}) => isActive ? "text-black border-b" : "text-gray-500"}
+              to="/"
+            >
+          
+              Items
+            </NavLink>
+            <NavLink
+              className={({isActive}) => isActive ? "text-black border-b" : "text-gray-500"}
+              to="/newItem"
+            >
+          
+              New Item
+            </NavLink>
+          </div>
         </div>
       </nav>
 
-      <main>
-        <Outlet />
+      <main className="container h-screen">
+        <div className="wraper-container">
+          <Outlet />
+        </div>
       </main>
     </>
   );

@@ -7,9 +7,20 @@
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  @apply bg-gray-100 dark:bg-gray-950;
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
 }
+
+
+@layer components {
+   .container {
+    @apply min-w-full p-3 sm:p-5;
+  }
+
+  .wraper-container {
+    @apply max-w-[1200px] w-[95%] mx-auto flex justify-between;
+  }
+} 

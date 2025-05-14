@@ -32,7 +32,7 @@ const NewItems = () => {
     <>
       <div className="max-w-md mx-auto">
         <h2 className="text-2xl font-bold mb-4">Create New Item</h2>
-        <Form method="post" className="space-y-4 bg-white p-4 rounded shadow border dark:bg-gray-950">
+        <Form method="post" className="space-y-4 bg-white p-4 rounded shadow dark:border dark:bg-gray-950">
           <div>
             <label className="block text-gray-700 dark:text-white">Title</label>
             <input

@@ -32,9 +32,9 @@ const NewItems = () => {
     <>
       <div className="max-w-md mx-auto">
         <h2 className="text-2xl font-bold mb-4">Create New Item</h2>
-        <Form method="post" className="space-y-4 bg-white p-4 rounded shadow">
+        <Form method="post" className="space-y-4 bg-white p-4 rounded shadow border dark:bg-gray-950">
           <div>
-            <label className="block text-gray-700">Title</label>
+            <label className="block text-gray-700 dark:text-white">Title</label>
             <input
               name="title"
               type="text"
@@ -43,7 +43,7 @@ const NewItems = () => {
             />
           </div>
           <div>
-            <label className="block text-gray-700">Content</label>
+            <label className="block text-gray-700 dark:text-white">Content</label>
             <textarea
               name="description"
               className="border border-gray-300 rounded px-3 py-2 w-full"

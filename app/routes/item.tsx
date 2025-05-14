@@ -56,9 +56,9 @@ const Item = ({ loaderData }: Route.ComponentProps) => {
 
       <h1>Update</h1>
 
-      <Form method="post">
+      <Form method="post" className="dark:text-white">
         <div>
-          <label className="block text-gray-700">Title</label>
+          <label className="block text-gray-700 dark:text-white">Title</label>
           <input
             name="title"
             type="text"
@@ -68,7 +68,7 @@ const Item = ({ loaderData }: Route.ComponentProps) => {
           />
         </div>
         <div>
-          <label className="block text-gray-700">Content</label>
+          <label className="block text-gray-700 dark:text-white">Content</label>
           <textarea
             name="description"
             defaultValue={item.description}

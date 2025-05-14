@@ -46,25 +46,24 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
   return (
     <>
-      <nav className="container bg-white shadow">
+      <nav className="container not-dark:bg-white shadow dark:shadow-gray-800">
         <div className="wraper-container">
           <NavLink
-            className="text-xl sm:text-2xl font-bold text-shadow-lg/20 dark:text-shadow-none"
+            className="text-xl sm:text-2xl font-bold text-shadow-lg/20"
             to="/"
           >
-          
             CRUD Router-V7
           </NavLink>
           <div className="space-x-2.5 text-gray-500 font-medium sm:space-x-5 sm:font-normal sm:text-[1.25rem]">
             <NavLink
-              className={({isActive}) => isActive ? "text-black border-b" : "text-gray-500"}
+              className={({isActive}) => isActive ? "dark:text-white not-dark:text-black border-b" : "text-gray-500"}
               to="/"
             >
           
               Items
             </NavLink>
             <NavLink
-              className={({isActive}) => isActive ? "text-black border-b" : "text-gray-500"}
+              className={({isActive}) => isActive ? "dark:text-white not-dark:text-black border-b" : "text-gray-500"}
               to="/newItem"
             >
           
